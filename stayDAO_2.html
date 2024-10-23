@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayDAO - Web3時代のシェアハウス型宿泊ネットワーク</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #1d1d1f;
+        }
+
+        .hero-section {
+            background: linear-gradient(45deg, #000000, #1d1d1f);
+            color: white;
+            padding: 120px 0;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.015em;
+        }
+
+        .sub-title {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #86868b;
+        }
+
+        .metric-card {
+            background: rgba(0,0,0,0.03);
+            border-radius: 18px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            background: rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            color: rgba(0,0,0,0.8);
+            font-weight: 500;
+            padding: 8px 16px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #0066cc;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #0066cc, #5856d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold">StayDAO</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#overview" class="nav-link">概要</a>
+                    <a href="#vision" class="nav-link">ビジョン</a>
+                    <a href="#service" class="nav-link">サービス</a>
+                    <a href="#market" class="nav-link">市場</a>
+                    <a href="#finance" class="nav-link">財務</a>
+                    <a href="#roadmap" class="nav-link">ロードマップ</a>
+                    <a href="#organization" class="nav-link">組織</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="section-title mb-6">
+                    Web3時代の<br>新しい暮らし方を創造する
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    StayDAOは、空き家問題の解決と新しい暮らし方の創造を目指す、
+                    Web3技術を活用したシェアハウス型宿泊ネットワークです。
+                    DAOによる分散型運営とスタッフレスの自律運営型施設を特徴とし、
+                    全国展開を視野に入れたスケーラブルなビジネスモデルを構築します。
+                </p>
+                <div class="inline-flex space-x-4">
+                    <a href="#service" class="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                        サービスを見る
+                    </a>
+                    <a href="#vision" class="bg-transparent border border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors">
+                        ビジョンを知る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Vision Section -->
+   <section class="py-24 bg-gray-50" id="vision">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center section-title mb-16">事業ビジョン</h2>
+        <div class="text-center mb-16">
+            <p class="text-2xl font-bold text-gray-800 mb-4 gradient-text">
+                「遊休資産の活用と地域コミュニティの活性化による、新しい暮らし方の実現」
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold mb-6">解決する社会課題</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">増加する空き家問題</span>
+                            <p class="text-gray-600">全国で849万戸に上る空き家の有効活用を実現し、社会資源の最適化を図ります。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">地方での宿泊施設不足</span>
+                            <p class="text-gray-600">地方における宿泊インフラを整備し、観光やビジネスの活性化を支援します。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">単身者の住居費負担</span>
+                            <p class="text-gray-600">効率的な運営システムにより、住居費用を大幅に削減し、経済的な生活を支援します。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">コミュニティの希薄化</span>
+                            <p class="text-gray-600">Web3技術を活用した新しいコミュニティ形成により、現代社会の課題解決に貢献します。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold mb-6">提供価値</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">柔軟な居住スタイルの実現</span>
+                            <p class="text-gray-600">場所に縛られない新しいライフスタイルを提供し、働き方改革にも貢献します。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">全国規模のコミュニティネットワーク</span>
+                            <p class="text-gray-600">地域を越えた人々のつながりを創出し、新たな価値観やビジネスチャンスを生み出します。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">低コストでの生活拠点確保</span>
+                            <p class="text-gray-600">従来比30-50%のコスト削減を実現し、より自由な生活設計を可能にします。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">●</span>
+                        <div>
+                            <span class="font-bold">地域資源の有効活用</span>
+                            <p class="text-gray-600">空き家の活用により、地域の価値向上と経済活性化に貢献します。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="text-center mb-16">
+            <h3 class="text-2xl font-bold mb-8">特徴的な仕組み</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">完全自動化運営</h4>
+                    <ul class="text-gray-600 text-left space-y-2">
+                        <li>• スマートロックによる入退室</li>
+                        <li>• AI活用の施設管理</li>
+                        <li>• 自動決済システム</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">コミュニティガバナンス</h4>
+                    <ul class="text-gray-600 text-left space-y-2">
+                        <li>• トークンによる議決権</li>
+                        <li>• 運営ルールの改善提案</li>
+                        <li>• 相互評価システム</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">インセンティブ設計</h4>
+                    <ul class="text-gray-600 text-left space-y-2">
+                        <li>• ポイント制度</li>
+                        <li>• 相互評価反映</li>
+                        <li>• 貢献度に応じた特典</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">スケーラビリティ</h4>
+                    <ul class="text-gray-600 text-left space-y-2">
+                        <li>• モジュール型システム</li>
+                        <li>• 標準化された運営</li>
+                        <li>• 展開容易性</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Key Metrics -->
+<section class="py-24 bg-white" id="overview">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center section-title mb-16">3年後の目標値</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div class="metric-card text-center">
+                <div class="text-4xl font-bold mb-2">60</div>
+                <div class="text-gray-600">施設数</div>
+                <div class="text-sm text-gray-500 mt-2">全国主要都市を網羅</div>
+            </div>
+            <div class="metric-card text-center">
+                <div class="text-4xl font-bold mb-2">6,000</div>
+                <div class="text-gray-600">会員数</div>
+                <div class="text-sm text-gray-500 mt-2">アクティブ率70%以上</div>
+            </div>
+            <div class="metric-card text-center">
+                <div class="text-4xl font-bold mb-2">20.4億円</div>
+                <div class="text-gray-600">年間売上高</div>
+                <div class="text-sm text-gray-500 mt-2">月間成長率10%</div>
+            </div>
+            <div class="metric-card text-center">
+                <div class="text-4xl font-bold mb-2">49%</div>
+                <div class="text-gray-600">営業利益率</div>
+                <div class="text-sm text-gray-500 mt-2">業界最高水準</div>
+            </div>
+            <div class="metric-card text-center">
+                <div class="text-4xl font-bold mb-2">284%</div>
+                <div class="text-gray-600">投資利益率(ROI)</div>
+                <div class="text-sm text-gray-500 mt-2">投資回収期間4.1ヶ月</div>
+            </div>
+        </div>
+
+        <!-- Additional KPIs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6">運営KPI目標</h3>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center">
+                        <span>会員数増加率</span>
+                        <span class="font-bold">月間10%以上</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span>施設稼働率</span>
+                        <span class="font-bold">85%以上</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span>ユーザー満足度</span>
+                        <span class="font-bold">4.0以上/5.0</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span>コミュニティ活性度</span>
+                        <span class="font-bold">週間アクティブ率70%以上</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6">施設単位の収支目標（月額）</h3>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center">
+                        <span>月間収入</span>
+                        <span class="font-bold text-green-600">1,700,000円</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span>運営コスト</span>
+                        <span class="font-bold text-red-600">491,000円</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span>営業利益</span>
+                        <span class="font-bold">1,209,000円</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span>利益率</span>
+                        <span class="font-bold">71.1%</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities Requirements -->
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-3xl font-bold mb-16">必須設備・システム要件</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold mb-6">必須設備</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <span class="w-32">入退室管理</span>
+                        <span class="text-gray-600">スマートロック</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">セキュリティ</span>
+                        <span class="text-gray-600">防犯カメラ（共用部のみ）</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">通信環境</span>
+                        <span class="text-gray-600">高速Wi-Fi</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">キッチン</span>
+                        <span class="text-gray-600">共同キッチン設備</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">水回り</span>
+                        <span class="text-gray-600">共同浴室・トイレ</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">洗濯</span>
+                        <span class="text-gray-600">共同洗濯機・乾燥機</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">収納</span>
+                        <span class="text-gray-600">個人用収納スペース</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold mb-6">運営システム</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <span class="w-32">入退室管理</span>
+                        <span class="text-gray-600">自動チェックイン/アウト</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">予約システム</span>
+                        <span class="text-gray-600">ブロックチェーン管理</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">決済システム</span>
+                        <span class="text-gray-600">自動決済処理</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">清掃確認</span>
+                        <span class="text-gray-600">AIカメラによる確認</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">コミュニティ</span>
+                        <span class="text-gray-600">会員間コミュニケーション</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold mb-6">運営ルール</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <span class="w-32">チェックイン</span>
+                        <span class="text-gray-600">15:00以降</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">チェックアウト</span>
+                        <span class="text-gray-600">11:00まで</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">清掃時間</span>
+                        <span class="text-gray-600">最少30分</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">ゴミ分別</span>
+                        <span class="text-gray-600">地域ルールに従う</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-32">共用部利用</span>
+                        <span class="text-gray-600">使用後の清掃必須</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Membership System -->
+<section class="py-24 bg-white" id="service">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center section-title mb-16">会員制度</h2>
+        
+        <!-- Membership Plans -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-24">
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-2xl font-bold mb-4">Unlimited</div>
+                <div class="text-4xl font-bold mb-4">20,000円<span class="text-base font-normal text-gray-600">/月</span></div>
+                <div class="text-gray-600 mb-4">必要トークン: 2,000 SDT</div>
+                <ul class="text-gray-600">
+                    <li class="mb-2">✓ 無制限利用可</li>
+                    <li class="mb-2">✓ 全国施設利用可能</li>
+                    <li class="mb-2">✓ 予約優先権付き</li>
+                    <li class="mb-2">✓ プレミアムサポート</li>
+                    <li class="mb-2">✓ コミュニティイベント参加権</li>
+                    <li class="mb-2">✓ ガバナンス投票権</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-2xl font-bold mb-4">Premium</div>
+                <div class="text-4xl font-bold mb-4">10,000円<span class="text-base font-normal text-gray-600">/月</span></div>
+                <div class="text-gray-600 mb-4">必要トークン: 1,000 SDT</div>
+                <ul class="text-gray-600">
+                    <li class="mb-2">✓ 月15泊まで</li>
+                    <li class="mb-2">✓ エリア利用可能</li>
+                    <li class="mb-2">✓ 優先予約オプション</li>
+                    <li class="mb-2">✓ 標準サポート</li>
+                    <li class="mb-2">✓ コミュニティ参加可能</li>
+                    <li class="mb-2">✓ 限定投票権</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-2xl font-bold mb-4">Standard</div>
+                <div class="text-4xl font-bold mb-4">3,000円<span class="text-base font-normal text-gray-600">/月</span></div>
+                <div class="text-gray-600 mb-4">必要トークン: 100 SDT</div>
+                <ul class="text-gray-600">
+                    <li class="mb-2">✓ 月5泊まで</li>
+                    <li class="mb-2">✓ ローカル利用</li>
+                    <li class="mb-2">✓ 基本予約権</li>
+                    <li class="mb-2">✓ 基本サポート</li>
+                    <li class="mb-2">✓ コミュニティ閲覧可</li>
+                    <li class="mb-2">✓ 提案権あり</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-2xl font-bold mb-4">Light</div>
+                <div class="text-4xl font-bold mb-4">1,000円<span class="text-base font-normal text-gray-600">/月</span></div>
+                <div class="text-gray-600 mb-4">必要トークン: 30 SDT</div>
+                <ul class="text-gray-600">
+                    <li class="mb-2">✓ 月2泊まで</li>
+                    <li class="mb-2">✓ ローカル利用のみ</li>
+                    <li class="mb-2">✓ 基本予約権</li>
+                    <li class="mb-2">✓ 基本サポート</li>
+                    <li class="mb-2">✓ コミュニティ閲覧のみ</li>
+                    <li class="mb-2">✓ 提案権なし</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-2xl font-bold mb-4">Guest</div>
+                <div class="text-4xl font-bold mb-4">0円<span class="text-base font-normal text-gray-600">/月</span></div>
+                <div class="text-gray-600 mb-4">必要トークン: 0 SDT</div>
+                <ul class="text-gray-600">
+                    <li class="mb-2">✓ 1泊のみ</li>
+                    <li class="mb-2">✓ 月2回まで</li>
+                    <li class="mb-2">✓ 通常料金での利用</li>
+                    <li class="mb-2">✓ 基本サポートのみ</li>
+                    <li class="mb-2">✓ コミュニティ閲覧不可</li>
+                    <li class="mb-2">✓ 権限なし</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Point System -->
+        <h3 class="text-3xl font-bold text-center mb-12">ポイントシステム</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h4 class="text-xl font-bold mb-6">ポイント獲得方法</h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span>施設利用完了</span>
+                        <span class="font-bold">利用料の3%</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>清掃高評価</span>
+                        <span class="font-bold">300ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>共用部清掃</span>
+                        <span class="font-bold">500ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>消耗品補充</span>
+                        <span class="font-bold">200ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>新規会員紹介</span>
+                        <span class="font-bold">3,000ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>ゴミ出し当番</span>
+                        <span class="font-bold">200ポイント</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h4 class="text-xl font-bold mb-6">ポイント使用用途</h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span>宿泊料金支払い</span>
+                        <span class="font-bold">実費分</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>予約優先権</span>
+                        <span class="font-bold">1,000ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>連泊制限解除</span>
+                        <span class="font-bold">2,000ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>トークン交換</span>
+                        <span class="font-bold">10,000P = 1SDT</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>特別イベント参加権</span>
+                        <span class="font-bold">5,000ポイント</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>アップグレード権</span>
+                        <span class="font-bold">20,000ポイント</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Market Analysis -->
+<section class="py-24 bg-gray-50" id="market">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center section-title mb-16">市場分析</h2>
+
+        <!-- Target Market -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12">ターゲット市場</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-2xl font-bold mb-4">コアターゲット</div>
+                    <div class="text-4xl font-bold mb-4 text-blue-600">3.0兆円</div>
+                    <div class="text-xl text-gray-600 mb-4">20-40代の単身者</div>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• 主要都市在住</li>
+                        <li>• 年収400-800万円</li>
+                        <li>• リモートワーク可能</li>
+                        <li>• デジタルネイティブ</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                        <div class="font-bold text-blue-800">目標シェア: 6.8%</div>
+                        <div class="text-blue-600">目標売上: 204億円</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-2xl font-bold mb-4">セカンダリー</div>
+                    <div class="text-4xl font-bold mb-4 text-green-600">1.5兆円</div>
+                    <div class="text-xl text-gray-600 mb-4">地方への二拠点生活希望者</div>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• 40-50代中心</li>
+                        <li>• 年収600-1000万円</li>
+                        <li>• 週末利用ニーズ</li>
+                        <li>• 地方創生に関心</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                        <div class="font-bold text-green-800">目標シェア: 6.8%</div>
+                        <div class="text-green-600">目標売上: 102億円</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-2xl font-bold mb-4">合計市場規模</div>
+                    <div class="text-4xl font-bold mb-4 text-purple-600">4.5兆円</div>
+                    <div class="text-xl text-gray-600 mb-4">潜在市場規模: 500万人</div>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• 年間成長率: 8%</li>
+                        <li>• Web3関心層: 30%</li>
+                        <li>• シェア住居検討層: 25%</li>
+                        <li>• 地方移住検討層: 35%</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-purple-50 rounded-lg">
+                        <div class="font-bold text-purple-800">総合目標シェア: 6.8%</div>
+                        <div class="text-purple-600">総目標売上: 306億円</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Analysis -->
+        <h3 class="text-3xl font-bold text-center mb-12">競合分析</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-2xl font-bold mb-4">既存シェアハウス</div>
+                <div class="space-y-4">
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">価格帯</div>
+                        <div class="font-bold">5-8万円/月</div>
+                    </div>
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">特徴</div>
+                        <ul class="font-bold space-y-1">
+                            <li>• 対面運営中心</li>
+                            <li>• 地域限定型</li>
+                            <li>• 人件費比率高</li>
+                        </ul>
+                    </div>
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">市場シェア</div>
+                        <div class="font-bold">15%</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-600">当社優位性</div>
+                        <ul class="text-green-600 font-bold space-y-1">
+                            <li>• 運営コスト70%減</li>
+                            <li>• 全国ネットワーク</li>
+                            <li>• トークンエコノミー</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-2xl font-bold mb-4">マンスリー</div>
+                <div class="space-y-4">
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">価格帯</div>
+                        <div class="font-bold">8-15万円/月</div>
+                    </div>
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">特徴</div>
+                        <ul class="font-bold space-y-1">
+                            <li>• 短期利用向き</li>
+                            <li>• 個別物件型</li>
+                            <li>• 初期費用高額</li>
+                        </ul>
+                    </div>
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">市場シェア</div>
+                        <div class="font-bold">10%</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-600">当社優位性</div>
+                        <ul class="text-green-600 font-bold space-y-1">
+                            <li>• 柔軟な利用形態</li>
+                            <li>• コミュニティ形成</li>
+                            <li>• 低コスト運営</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-2xl font-bold mb-4">ホテル定額制</div>
+                <div class="space-y-4">
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">価格帯</div>
+                        <div class="font-bold">10-20万円/月</div>
+                    </div>
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">特徴</div>
+                        <ul class="font-bold space-y-1">
+                            <li>• 施設限定的</li>
+                            <li>• サービス重視</li>
+                            <li>• 高コスト体質</li>
+                        </ul>
+                    </div>
+                    <div class="border-b pb-2">
+                        <div class="text-gray-600">市場シェア</div>
+                        <div class="font-bold">5%</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-600">当社優位性</div>
+                        <ul class="text-green-600 font-bold space-y-1">
+                            <li>• 全国ネットワーク</li>
+                            <li>• 価格競争力</li>
+                            <li>• 自律運営型</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Trends -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <h4 class="text-2xl font-bold mb-6">市場トレンド分析</h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="font-bold mb-3">シェアリングエコノミーの成長</h5>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• 年間成長率15%以上</li>
+                        <li>• Z世代の高い受容性</li>
+                        <li>• 所有から利用へのシフト</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-3">働き方改革の進展</h5>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• リモートワークの定着</li>
+                        <li>• 副業・複業の増加</li>
+                        <li>• ワーケーションの普及</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-3">Web3への期待</h5>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• DAOへの注目度上昇</li>
+                        <li>• トークンエコノミー拡大</li>
+                        <li>• 分散型サービスの増加</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Financial Plan -->
+<section class="py-24 bg-white" id="finance">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center section-title mb-16">財務計画</h2>
+
+        <!-- Revenue Structure -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12">収益構造</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">収入構造（施設単位・月額）</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>月会費収入</span>
+                            <div class="text-right">
+                                <div class="font-bold">500,000円</div>
+                                <div class="text-sm text-gray-600">29.4%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>会員宿泊料金収入</span>
+                            <div class="text-right">
+                                <div class="font-bold">600,000円</div>
+                                <div class="text-sm text-gray-600">35.3%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>ゲスト宿泊料金収入</span>
+                            <div class="text-right">
+                                <div class="font-bold">400,000円</div>
+                                <div class="text-sm text-gray-600">23.5%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>付帯サービス収入</span>
+                            <div class="text-right">
+                                <div class="font-bold">200,000円</div>
+                                <div class="text-sm text-gray-600">11.8%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="font-bold">合計</span>
+                            <div class="text-right">
+                                <div class="font-bold text-xl">1,700,000円</div>
+                                <div class="text-sm text-gray-600">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">支出構造（施設単位・月額）</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>建物賃料</span>
+                            <div class="text-right">
+                                <div class="font-bold">300,000円</div>
+                                <div class="text-sm text-gray-600">61.1%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>光熱費</span>
+                            <div class="text-right">
+                                <div class="font-bold">60,000円</div>
+                                <div class="text-sm text-gray-600">12.2%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>通信費</span>
+                            <div class="text-right">
+                                <div class="font-bold">15,000円</div>
+                                <div class="text-sm text-gray-600">3.1%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>メンテナンス</span>
+                            <div class="text-right">
+                                <div class="font-bold">40,000円</div>
+                                <div class="text-sm text-gray-600">8.1%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>保険料</span>
+                            <div class="text-right">
+                                <div class="font-bold">25,000円</div>
+                                <div class="text-sm text-gray-600">5.1%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>予備費</span>
+                            <div class="text-right">
+                                <div class="font-bold">51,000円</div>
+                                <div class="text-sm text-gray-600">10.4%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="font-bold">合計</span>
+                            <div class="text-right">
+                                <div class="font-bold text-xl">491,000円</div>
+                                <div class="text-sm text-gray-600">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- P/L Plan -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12">P/L計画（年次）</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-2xl shadow-lg">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-4 text-left">項目</th>
+                            <th class="px-6 py-4 text-right">Phase 1</th>
+                            <th class="px-6 py-4 text-right">Phase 2</th>
+                            <th class="px-6 py-4 text-right">Phase 3</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">売上高</td>
+                            <td class="px-6 py-4 text-right">20.4億円</td>
+                            <td class="px-6 py-4 text-right">61.2億円</td>
+                            <td class="px-6 py-4 text-right">122.4億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">売上原価</td>
+                            <td class="px-6 py-4 text-right">10.4億円</td>
+                            <td class="px-6 py-4 text-right">31.2億円</td>
+                            <td class="px-6 py-4 text-right">62.4億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">売上総利益</td>
+                            <td class="px-6 py-4 text-right">10.0億円</td>
+                            <td class="px-6 py-4 text-right">30.0億円</td>
+                            <td class="px-6 py-4 text-right">60.0億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">販管費</td>
+                            <td class="px-6 py-4 text-right">5.0億円</td>
+                            <td class="px-6 py-4 text-right">15.0億円</td>
+                            <td class="px-6 py-4 text-right">30.0億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 font-bold">
+                            <td class="px-6 py-4">営業利益</td>
+                            <td class="px-6 py-4 text-right">5.0億円</td>
+                            <td class="px-6 py-4 text-right">15.0億円</td>
+                            <td class="px-6 py-4 text-right">30.0億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">営業利益率</td>
+                            <td class="px-6 py-4 text-right">24.5%</td>
+                            <td class="px-6 py-4 text-right">24.5%</td>
+                            <td class="px-6 py-4 text-right">24.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Cash Flow -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12">キャッシュフロー計画</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-2xl shadow-lg">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-4 text-left">項目</th>
+                            <th class="px-6 py-4 text-right">Phase 1</th>
+                            <th class="px-6 py-4 text-right">Phase 2</th>
+                            <th class="px-6 py-4 text-right">Phase 3</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">営業CF</td>
+                            <td class="px-6 py-4 text-right">6.0億円</td>
+                            <td class="px-6 py-4 text-right">18.0億円</td>
+                            <td class="px-6 py-4 text-right">36.0億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">投資CF</td>
+                            <td class="px-6 py-4 text-right">-5.0億円</td>
+                            <td class="px-6 py-4 text-right">-15.0億円</td>
+                            <td class="px-6 py-4 text-right">-30.0億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">財務CF</td>
+                            <td class="px-6 py-4 text-right">2.0億円</td>
+                            <td class="px-6 py-4 text-right">6.0億円</td>
+                            <td class="px-6 py-4 text-right">12.0億円</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 font-bold">
+                            <td class="px-6 py-4">期末残高</td>
+                            <td class="px-6 py-4 text-right">3.0億円</td>
+                            <td class="px-6 py-4 text-right">12.0億円</td>
+                            <td class="px-6 py-4 text-right">30.0億円</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Investment Plan & ROI -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12">投資計画とROI分析</h3>
+            
+            <!-- Initial Investment -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">初期投資内訳（Phase 1）</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>システム開発費</span>
+                            <div class="text-right">
+                                <div class="font-bold">2,000万円</div>
+                                <div class="text-sm text-green-600">ROI: 150%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>施設整備費</span>
+                            <div class="text-right">
+                                <div class="font-bold">2,000万円</div>
+                                <div class="text-sm text-green-600">ROI: 200%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>運転資金</span>
+                            <div class="text-right">
+                                <div class="font-bold">1,000万円</div>
+                                <div class="text-sm text-green-600">ROI: 250%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-2 font-bold">
+                            <span>合計</span>
+                            <div class="text-right">
+                                <div>5,000万円</div>
+                                <div class="text-sm text-green-600">平均ROI: 200%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">施設単位のROI分析</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>初期投資額</span>
+                            <div class="font-bold">500万円</div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>月間収益</span>
+                            <div class="font-bold text-green-600">120.9万円</div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>年間収益</span>
+                            <div class="font-bold text-green-600">1,450.8万円</div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>ROI</span>
+                            <div class="font-bold text-green-600">290%</div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>回収期間</span>
+                            <div class="font-bold">4.1ヶ月</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">資金調達方法</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>トークンセール</span>
+                            <div class="text-right">
+                                <div class="font-bold">250百万円</div>
+                                <div class="text-sm text-gray-600">62.5%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>ベンチャーキャピタル</span>
+                            <div class="text-right">
+                                <div class="font-bold">100百万円</div>
+                                <div class="text-sm text-gray-600">25%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span>補助金活用</span>
+                            <div class="text-right">
+                                <div class="font-bold">50百万円</div>
+                                <div class="text-sm text-gray-600">12.5%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-2 font-bold">
+                            <span>合計</span>
+                            <div class="text-right">
+                                <div>400百万円</div>
+                                <div class="text-sm text-gray-600">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Analysis -->
+            <h3 class="text-3xl font-bold text-center mb-12">リスク分析と対策</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">主要リスクと対策</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">運営リスク</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">発生確率: 中</span>
+                            </div>
+                            <div class="text-gray-600 mb-2">課題: 品質管理、セキュリティ維持</div>
+                            <div class="text-green-600">対策: AIモニタリング、ブロックチェーン認証</div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">品質リスク</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">発生確率: 中</span>
+                            </div>
+                            <div class="text-gray-600 mb-2">課題: 施設メンテナンス、清掃品質</div>
+                            <div class="text-green-600">対策: 相互評価システム、定期点検</div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">資金リスク</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded">発生確率: 低</span>
+                            </div>
+                            <div class="text-gray-600 mb-2">課題: 運転資金、投資回収</div>
+                            <div class="text-green-600">対策: 段階的投資、収支管理</div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">法的リスク</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded">発生確率: 低</span>
+                            </div>
+                            <div class="text-gray-600 mb-2">課題: 規制対応、コンプライアンス</div>
+                            <div class="text-green-600">対策: 顧問弁護士との連携、体制整備</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">撤退計画</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="font-bold mb-2">PoCフェーズ</div>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 判断基準: 稼働率40%未満</li>
+                                <li>• 撤退コスト: 300万円</li>
+                                <li>• 判断時期: 3ヶ月後</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold mb-2">MVPフェーズ</div>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 判断基準: 会員数200名未満</li>
+                                <li>• 撤退コスト: 1,000万円</li>
+                                <li>• 判断時期: 6ヶ月後</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold mb-2">Phase 1</div>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 判断基準: 利益率15%未満</li>
+                                <li>• 撤退コスト: 3,000万円</li>
+                                <li>• 判断時期: 1年後</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Organization Structure -->
+   <section class="py-24 bg-gray-50" id="organization">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center section-title mb-16">組織体制</h2>
+
+        <!-- Governance Structure -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12">ガバナンス体制</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">委員会構成</h4>
+                    <div class="space-y-4">
+                        <div class="border-b pb-4">
+                            <div class="font-bold text-blue-600 mb-2">技術委員会</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• システム開発・運用</li>
+                                <li>• セキュリティ管理</li>
+                                <li>• インフラ整備</li>
+                                <li>構成人数: 3名</li>
+                                <li>年間コスト: 2,400万円</li>
+                            </ul>
+                        </div>
+                        <div class="border-b pb-4">
+                            <div class="font-bold text-green-600 mb-2">施設委員会</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• 物件開発・管理</li>
+                                <li>• メンテナンス統括</li>
+                                <li>• 品質管理</li>
+                                <li>構成人数: 2名</li>
+                                <li>年間コスト: 1,600万円</li>
+                            </ul>
+                        </div>
+                        <div class="border-b pb-4">
+                            <div class="font-bold text-purple-600 mb-2">コミュニティ委員会</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• 会員管理・活性化</li>
+                                <li>• イベント企画</li>
+                                <li>• CS向上</li>
+                                <li>構成人数: 2名</li>
+                                <li>年間コスト: 1,600万円</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold text-red-600 mb-2">財務委員会</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• 資金管理・配分</li>
+                                <li>• 収支管理</li>
+                                <li>• 投資判断</li>
+                                <li>構成人数: 2名</li>
+                                <li>年間コスト: 1,600万円</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">トークンガバナンス</h4>
+                    <div class="space-y-6">
+                        <div class="mb-4">
+                            <div class="font-bold mb-2">トークン概要</div>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 名称: StayDAO Token (SDT)</li>
+                                <li>• 総発行量: 1,000万トークン</li>
+                                <li>• 初期価格: 250円/トークン</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <div class="font-bold mb-2">トークン配分</div>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 初期販売: 40%</li>
+                                <li>• チーム・アドバイザー: 20%</li>
+                                <li>• コミュニティ報酬: 20%</li>
+                                <li>• リザーブ: 20%</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold mb-2">投票権限</div>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 運営方針決定</li>
+                                <li>• 重要投資判断</li>
+                                <li>• 規約改定</li>
+                                <li>• 配当政策</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h4 class="text-xl font-bold mb-6">スマートコントラクト構成</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="font-bold text-indigo-600 mb-2">投票契約</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• 議案提出機能</li>
+                                <li>• 投票実行機能</li>
+                                <li>• 結果確定処理</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold text-indigo-600 mb-2">トークン契約</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• トークン発行管理</li>
+                                <li>• 残高・移転管理</li>
+                                <li>• ロック機能</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold text-indigo-600 mb-2">ポイント契約</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• ポイント付与</li>
+                                <li>• 使用履歴管理</li>
+                                <li>• 交換処理</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-bold text-indigo-600 mb-2">アクセス権契約</div>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• 会員権管理</li>
+                                <li>• 施設利用権確認</li>
+                                <li>• 権限委譲処理</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">StayDAO</h3>
+                <p class="text-gray-400">Web3時代の新しい暮らし方を創造する</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">お問い合わせ</h3>
+                <p class="text-gray-400">info@staydao.com</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">ソーシャルメディア</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Discord</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2024 StayDAO. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
